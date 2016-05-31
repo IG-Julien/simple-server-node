@@ -1,29 +1,33 @@
 {
-  "name": "simple-server-node",
-  "version": "1.0.0",
-  "description": "A simple Expressjs Web server on resin.io",
-  "main": "server.js",
+  "name": "resin-electronjs",
+  "version": "0.0.3",
+  "description": "electronJS-based rpi resin application",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "NODE_ENV=production startx ./node_modules/electron-prebuilt/dist/electron .",
+    "test": "NODE_ENV=development startx ./node_modules/electron-prebuilt/dist/electron ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/resin-io-projects/simple-server-node.git"
+    "url": "git+https://github.com/fwrgit/resin-electronjs.git"
   },
   "keywords": [
-    "resin.io",
-    "webserver",
-    "nodejs",
-    "expressjs"
+    "resin",
+    "io",
+    "electron",
+    "js"
   ],
-  "author": "Shaun Mulligan <shaun@resin.io>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/resin-io-projects/simple-server-node/issues"
-  },
-  "homepage": "https://github.com/resin-io-projects/simple-server-node#readme",
   "dependencies": {
-    "express": "*"
+    "electron-prebuilt": "^1.1.3"
+  },
+  "author": "Carlo Maria Curinga",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fwrgit/resin-electronjs/issues"
+  },
+  "homepage": "https://github.com/fwrgit/resin-electronjs#readme",
+  "jshintConfig": {
+    "esnext": true,
+    "strict": true
   }
 }
